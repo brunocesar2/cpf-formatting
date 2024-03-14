@@ -2,8 +2,6 @@
 body {
   margin: 0;
   font-family: "Rubik", sans-serif;
-  background: #000;
-  color: #fff;
 }
 button {
   font-family: "Rubik", sans-serif;
@@ -44,32 +42,9 @@ p,
 dd {
   line-height: 1.5;
 }
-label {
-  display: block;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-}
-input {
-  width: 100%;
+li {
   padding: 5px;
-  border: 2px solid black;
-  font-size: 1rem;
-  box-sizing: border-box;
 }
-input::placeholder {
-  color: rgba(0, 0, 0, 0.2);
-}
-input.error {
-  border-color: red;
-}
-input.valid {
-  border-color: green;
-}
-.error-text {
-  display: none;
-  font-size: .875rem;
-  color: red;
-}
-.error-text.active {
-  display: block;
+li:nth-of-type(odd) {
+  background: rgba(0, 0, 0, 0.1);
 }
