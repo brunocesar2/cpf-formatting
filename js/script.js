@@ -1,23 +1,23 @@
 const cpfs = document.querySelectorAll(".cpf li");
-const cpfsValues = ([...cpf]) => {
+const cpfsArray = ([...cpf]) => {
   return cpf.map((cpf) => {
     return cpf.innerText;
   });
 };
-const clearCPF = (cpf) => {
+const clear = (cpf) => {
   return cpf.replace(/\D/g, "");
 };
-const buildCPF = (cpf) => {
+const build = (cpf) => {
   return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, "$1.$2.$3-$4");
 };
-const formatCPF = (cpf) => {
-  return cpf.map(clearCPF).map(buildCPF);
+const format = (cpf) => {
+  return cpf.map(clear).map(build);
 };
-const changeCPF = (cpfs) => {
-  const cpfsList = cpfsValues(cpfs);
-  const formattedCpfs = formatCPF(cpfsList);
+const change = (cpfs) => {
+  const cpfsValues = cpfsArray(cpfs);
+  const formattedCpfs = format(cpfsValues);
   cpfs.forEach((cpf, index) => {
     cpf.innerText = formattedCpfs[index];
   });
 };
-changeCPF(cpfs);
+change(cpfs);
