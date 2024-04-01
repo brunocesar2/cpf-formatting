@@ -1,4 +1,4 @@
-const cpfs = document.querySelectorAll(".cpf li");
+const cpfs = document.querySelectorAll("ul li");
 const cpfsValues = ([...cpfs]) => {
   return cpfs.map((cpf) => {
     return cpf.innerText;
